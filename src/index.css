@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* fonts */
+@font-face {
+  font-family: "LINESeedKR";
+  src: url("./assets/fonts/LINESeedKR-Th.otf") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LINESeedKR";
+  src: url("./assets/fonts/LINESeedKR-Rg.otf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LINESeedKR";
+  src: url("./assets/fonts/LINESeedKR-Bd.otf") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "LINESeedKR";
+  margin: 0 auto;
+  width: 390px;
+  min-width: 390px;
+  max-width: 390px;
+  /* 드래그 방지 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
