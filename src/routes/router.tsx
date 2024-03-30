@@ -14,6 +14,7 @@ const router = createBrowserRouter([
       { path: "/", element: <MainPage /> },
       { path: "/list", element: <ListPage /> },
       { path: "/write", element: <WritePage /> },
+      { path: "/edit", element: <WritePage /> },
     ],
   },
 ]);
