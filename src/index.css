@@ -41,3 +41,8 @@ body {
 .write_header {
   @apply flex justify-between;
 }
+
+/* nav */
+.nav {
+  @apply w-[24.375rem] fixed bottom-0 z-10 pt-5 pb-[2.125rem] bg-base-white;
+}

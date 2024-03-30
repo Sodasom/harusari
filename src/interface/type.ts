@@ -9,4 +9,5 @@ export interface ILayoutProps {
 export interface IIconProps {
   width: string;
   height: string;
+  fill?: string;
 }
