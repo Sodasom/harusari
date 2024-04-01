@@ -11,3 +11,11 @@ export interface IIconProps {
   height: string;
   fill?: string;
 }
+
+// calendar
+export interface ICalendarProps {
+  selectedDay: Date;
+  setSelectedDay: React.Dispatch<Date | null>;
+  isPrevMonth: boolean;
+  isNextMonth: boolean;
+}

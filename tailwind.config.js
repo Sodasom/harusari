@@ -22,7 +22,7 @@ export default {
         },
       },
       dropShadow: {
-        "nav-shadow": "0px 4px 8px 0px rgba(0, 0, 0, 0.32)",
+        "calendar-shadow": "8px 3px 22px 10px rgba(0, 0, 0, 0.11)",
       },
     },
   },
