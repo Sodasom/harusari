@@ -6,7 +6,7 @@ import ArrowLeftIcon from "../../assets/icons/ArrowLeftIcon";
 import ArrowRightIcon from "../../assets/icons/ArrowRightIcon";
 
 export default function Calendar({
-  selectedDay,
+  selectedDay = new Date(),
   setSelectedDay,
   isPrevMonth = true,
   isNextMonth = true,
@@ -133,16 +133,32 @@ export default function Calendar({
   const buildCalendarTag = (calendarDays: Date[]) => {
     return calendarDays.map((day: Date, index: number) => {
       if (day.getMonth() < currentMonth.getMonth()) {
-        return <td key={index}>{isPrevMonth ? day.getDate() : ""}</td>;
+        return (
+          <td key={index} className="text-[#7e818c]">
+            {isPrevMonth ? day.getDate() : ""}
+          </td>
+        );
       }
       if (day.getMonth() > currentMonth.getMonth()) {
-        return <td key={index}>{isNextMonth ? day.getDate() : ""}</td>;
+        return (
+          <td key={index} className="text-[#7e818c]">
+            {isNextMonth ? day.getDate() : ""}
+          </td>
+        );
       }
       if (day.getTime() < today.getTime()) {
         return <td key={index}>{day.getDate()}</td>;
       }
       return (
-        <td key={index} onClick={() => onClickDay(day)}>
+        <td
+          key={index}
+          onClick={() => onClickDay(day)}
+          className={`${
+            isSameDay(day, selectedDay)
+              ? "text-base-white bg-primary-point rounded-2xl"
+              : ""
+          }`}
+        >
           {day.getDate()}
         </td>
       );
